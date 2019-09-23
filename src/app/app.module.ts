@@ -6,6 +6,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { UserCartComponent } from './user-cart/user-cart.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ProductListComponent } from './product-list/product-list.component';
     HomePageComponent,
     NavBarComponent,
     ProductDetailsComponent,
-    ProductListComponent
+    ProductListComponent,
+    UserCartComponent
   ],
   imports: [
     BrowserModule
