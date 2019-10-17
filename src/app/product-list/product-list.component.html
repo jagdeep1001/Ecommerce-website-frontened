@@ -1,1 +1,76 @@
-<p>product-list works!</p>
+<div class="container-fluid mt-5 d-flex">
+<div style="width:20% ; border-right:1px solid lightgrey;border-top:1px solid lightgrey;" >
+<p class="text-muted font1 mt-2 bgcolor " style="text-align: center; font-size:20px;">Filters</p>
+  <hr>
+  <div >
+    <p class="text-muted font-italic bgcolor" style="text-align: center;">Categories</p>
+    <form class="pl-4">
+      <input type="radio" id="clothing" class="form-check-input" name="category"(click)="goTo('clothing')" ><span class="text-muted font-italic">Clothing</span><br>
+      <input type="radio" id="footwear" class="form-check-input" name="category"(click)="goTo('footwear')" ><span class="text-muted font-italic">FootWear</span><br>
+      <input type="radio" id="electronics" class="form-check-input" name="category"(click)="goTo('electronics')" ><span class="text-muted font-italic">Electronics</span><br>
+      <input type="radio" id="books" class="form-check-input" name="category"(click)="goTo('books')" ><span class="text-muted font-italic">Books</span><br>
+    </form>
+  </div>
+  <hr>
+<!--  <div >-->
+<!--    <p class="text-muted font-italic bgcolor" style="text-align: center;">Brand</p>-->
+<!--    <form>-->
+<!--      <input type="checkbox"><span class="text-muted font-italic">Forever 21</span><br>-->
+<!--      <input type="checkbox"><span class="text-muted font-italic">U.S. Polo</span><br>-->
+<!--      <input type="checkbox"><span class="text-muted font-italic">Jack & Jones</span><br>-->
+<!--      <input type="checkbox"><span class="text-muted font-italic">UCB</span><br>-->
+
+
+<!--    </form>-->
+<!--<hr>-->
+<!--  </div>-->
+
+  <div >
+    <p class="text-muted font-italic bgcolor" style="text-align: center;" >Price</p>
+    <form class="pl-4">
+      <input type="radio" class="form-check-input" name="range" (click)="filterByPrice(0,1000)"><span class="text-muted font-italic">Less than 1000</span><br>
+      <input type="radio" class="form-check-input" name="range" (click)="filterByPrice(1000,3000)"><span class="text-muted font-italic">1000-3000</span><br>
+      <input type="radio" class="form-check-input" name="range" (click)="filterByPrice(3000,5000)"><span class="text-muted font-italic">3000-5000</span><br>
+      <input type="radio" class="form-check-input" name="range" (click)="filterByPrice(5000,10000)"><span class="text-muted font-italic">Greater than 5000</span><br>
+
+
+    </form>
+    <hr>
+  </div>
+<!--  <div>-->
+<!--    <p class="text-muted font-italic bgcolor" style="text-align: center;">Color</p>-->
+<!--    <form>-->
+
+<!--        <input type="checkbox" ><span class="text-muted font-italic ">Red</span><br>-->
+<!--      <input type="checkbox"><span class="text-muted font-italic">Green</span><br>-->
+<!--      <input type="checkbox"><span class="text-muted font-italic">Blue</span><br>-->
+<!--      <input type="checkbox"><span class="text-muted font-italic">Black</span><br>-->
+<!--      <input type="checkbox"><span class="text-muted font-italic">Pink</span><br>-->
+<!--      <input type="checkbox"><span class="text-muted font-italic">Yellow</span><br>-->
+
+<!--    </form>-->
+<!--    <hr>-->
+<!--  </div>-->
+</div>
+<div style="width: 100%; border-top:1px solid lightgrey;">
+<div class="mt-2 d-flex" style="flex-wrap: wrap;">
+<div *ngFor="let prod of products">
+
+  <div class="card m-3 p-2" style="width: 16rem; height: 500px;">
+    <a href="productdetails"><img src="{{prod.image}}" class="card-img-top" height="250"></a>
+    <div class="card-body">
+      <h5 class="card-title font-italic">{{prod.name}}</h5>
+<!--      <p class="card-text"><span class="font-weight-bold font-italic">{{prod.desc}} </span></p>-->
+      <p class="card-text"><span class="font-weight-bold font-italic">Price : </span>{{prod.price | currency:"INR"}}</p>
+<button class="btn btn-outline-success btn-sm" (click)="addToCart(prod.productId)">Add to Cart</button>&nbsp;
+      <button (click)="seeDetails(prod)" class="btn btn-outline-success btn-sm">See Product</button><br><br>
+      <button class="btn btn-outline-danger btn-sm w-100" (click)="removeProduct(prod)" *ngIf="loginService.isUserLoggedIn() && this.role=='Admin'" ><i class="fa p-1">&#xf1f8;&nbsp;</i>Remove Product</button><br><br>
+
+      <button class="btn btn-outline-warning btn-sm w-100" (click)="editProduct(prod)" *ngIf="loginService.isUserLoggedIn() && this.role=='Admin'" ><i class="fa p-1">&#xf044;&nbsp;</i>Edit Product</button>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+</div>

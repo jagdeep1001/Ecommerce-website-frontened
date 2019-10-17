@@ -1,1 +1,47 @@
-<p>nav-bar works!</p>
+<div style="height:40px;">
+<nav class="navbar navbar-expand  color1 navbar-light fixed-top pb-2" >
+
+  <ul class="navbar-nav " style="float: left;">
+    <li class="nav-item">
+      <a class="navbar-brand font1 " href="home" style=" font-size:20px;">Shopping Bee</a>
+    </li>
+    <li class="nav-item">
+
+        <form class="form-inline" action="/action_page.php">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-success font1" type="submit">Search</button>
+        </form>
+
+
+    </li>
+  </ul>
+
+
+  <ul class="navbar-nav ml-auto ">
+    <li class="nav-item pr-3">
+      <a class="nav-link font1" href="login"><i class="fa fa-user p-1" style="font-size:20px;"></i>Login/Signup</a>
+      <ul class="dropdown">
+        <li><a href="login"  class="font1">Login</a></li>
+        <li><a href="registration" class="font1">SignUp</a></li>
+      </ul>
+    </li>
+
+    <li class="nav-item pr-3">
+      <a class="nav-link font1" href="cart"><i class="fa fa-shopping-cart p-1" style="font-size:20px;"></i>Your cart</a>
+    </li>
+    <li class="nav-item dropdown pr-3" *ngIf="loginService.isUserLoggedIn()">
+      <a class="nav-link font1"  href="#"><i class="fa p-1" style="font-size:20px;">&#xf007;&nbsp;</i>Your Account</a>
+      <ul class="dropdown">
+        <a href="myAccount" class="font1"><i class="fa p-1">&#xf044;&nbsp;</i>Edit Profile</a>
+        <a  href="logout" class="font1"><i class="fa p-1">&#xf03b;&nbsp;</i>Logout</a>
+      </ul>
+    </li>
+    <li class="nav-item pr-3">
+      <a class="nav-link font1" href="orderHistory" *ngIf="loginService.isUserLoggedIn()"><i class="fa p-1" style="font-size:20px;">&#xf1da;&nbsp;</i>Order History</a>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+

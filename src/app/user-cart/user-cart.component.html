@@ -1,1 +1,120 @@
-<p>user-cart works!</p>
+<div class="mt-4 bg-light" >
+
+  <div class="container bg-light">
+    <div class="container-fluid pb-5">
+
+
+      <h1 class="font1 text-center pt-4 text-black-50 mt-2">My Cart</h1>
+      <hr class="mb-4">
+
+
+      <div class="container">
+
+
+
+
+        <!--Product detail in bag-->
+        <!--<div class="cart">-->
+
+        <div *ngFor="let product of myProducts" class="row border-bottom" style="padding-bottom: 40px; padding-top: 20px;">
+
+          <div class="col-sm-4 m-2">
+            <img src="{{product.products.image}}" height="310" width="250" class="img-thumbnail">
+          </div>
+          <div class="col-sm-7 m-2">
+            <div><b><h4 class="font2">{{product.products.name}}</h4></b></div>
+            <div><b>Quantity :</b>&nbsp;
+              <button class="btn btn-outline-success "(click)="removeOneQuantity(product.products.productId)" style="width:6%; text-align: center;">-&nbsp;</button>
+              &nbsp;<span class="badge badge-light">{{product.quantity}}</span>&nbsp;
+              <button class="btn btn-outline-success" (click)="addOneQuantity(product.products.productId)" style="width:6%;text-align: center;">+&nbsp;</button></div><br>
+            <div><b>Price&nbsp;<i class="fa p-1">&#xf02b;</i>:</b>&nbsp;<span class="font-weight-">{{product.products.price | currency:"INR"}}</span></div><hr>
+            <button class="btn btn-outline-danger" (click)="removeProduct(product.products.productId)"><i class="fa p-1">&#xf1f8;&nbsp;</i>Remove</button>
+            <a class="btn btn-outline-success ml-5" href="products/all"><i class="fa p-1">&#xf07a;&nbsp;</i>Continue Shopping</a>
+          </div>
+          <hr>
+        </div>
+        <!--cart total-->
+        <div class="row">
+          <div class="col-sm-6">
+            <h3 class="font1 text-black-50">Cart Total: <i class="fa p-1">&#xf156;</i><span class="font-weight-bold">{{this.total}}</span></h3>
+          </div>
+          <div class="col-sm-6">
+            <h3 class="font1 text-black-50 text-right">Cart Items:- <span class="font-weight-bold">{{this.length}}</span></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    Shipping Details
+    <div class="container">
+
+      <div class="container-fluid">
+
+        <h1 class="font1 text-center pb-3 text-info" id="add_Address">Shipping Details</h1>
+
+        <hr class="mb-2">
+
+        <h4 class="p-2 text-info">Use already existing address<small>(if any)</small></h4>
+
+
+        <select class="custom-select" maxlength="50">
+          <option value="address" selected disabled>Choose Your Address</option>
+          <option value="address">#112, Sec 12, Huda, Panipat</option>
+        </select>
+        <br>
+
+        <br>
+        <div>
+          <small class="text-info font-weight-bold">OR</small>
+        </div>
+        <br>
+        <form action="login" class="is-validated">
+
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Your Name" name="name" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="pincode" placeholder="Pin Code" name="pincode" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="address" placeholder="Full Address" name="address" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="number" placeholder="Mobile Number(for order status update)" name="pswd" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+          <b class="ml-1">Address Type:- </b>&nbsp;
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="addType" checked>Home
+            </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="addType">Office
+            </label>
+          </div>
+          <button type="submit" class="btn btn-success mt-5 mb-5 w-100" (click)="checkOut()" k>PLACE ORDER</button>
+        </form>
+
+
+      </div>
+
+
+    <br><br>
+
+    </div>-->
+    <button type="submit" class="btn btn-outline-success mt-5 mb-5 w-100" (click)="checkOut()" >PLACE ORDER</button>
+  </div>
+
+
+
+</div>

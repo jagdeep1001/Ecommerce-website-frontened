@@ -1,0 +1,29 @@
+<div class="container ">
+
+  <h1 class="font1 my-3 pt-5 text-center">Order History</h1>
+  <table class="table table-hover text-center text-black-50">
+    <thead>
+    <tr>
+      <th>Product Image</th>
+      <th>Product Name</th>
+      <th>Product Quantity</th>
+      <th>Product Price</th>
+      <th>Date</th>
+      <th>See Details</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let history of OrderHistory">
+      <td><img src="{{history.image}}" height="120px" width="130px"></td>
+      <td><b>{{history.name}}</b></td>
+      <td>{{history.quantity}}</td>
+      <td class="text-danger"><b><i class="fa my-3">&#xf156;&nbsp;</i>{{history.price}}</b></td>
+      <td>{{history.date}}</td>
+      <td><button class="btn btn-outline-success" (click)="checkDetails(history.productId)">See Details</button></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <button class=" btn btn-outline-success btn-lg mb-5 w-100" (click)="continueShopping()">Shop More <i class="fa p-1">&#xf290;&nbsp;</i></button>
+
+</div>

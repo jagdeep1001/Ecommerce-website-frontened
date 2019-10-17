@@ -1,0 +1,20 @@
+.card {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.bgcolor{
+  background-color: #deebdd;
+  background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 74%);
+}
+.c2{
+position:absolute;
+color:#001f3f;
+font-style:bold;
+text-shadow: 2px 2px #ffffff;
+font-size:24px;
+}
+.font1{
+font-family: 'Kaushan Script', cursive;
+}
+.font2{
+font-family: 'Lobster', cursive;
+}

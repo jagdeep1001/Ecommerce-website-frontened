@@ -1,0 +1,15 @@
+.font1{
+  font-family: 'Kaushan Script', cursive;
+}
+.alink{
+  text-decoration: none;
+
+}
+.alink :hover{
+  color:red;
+
+}
+.bgcolor{
+  background-color: #deebdd;
+  background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 74%);
+}

@@ -1,0 +1,139 @@
+<!--<div >-->
+<!--<div class="container ">-->
+<!--  <div class="card bg-light">-->
+<!--    <article class="card-body mx-auto" style="max-width: 400px;">-->
+<!--      <h4 class="card-title mt-3 text-center">Create Account</h4>-->
+<!--      <p class="text-center">Get started with your free account</p>-->
+
+<!--      <p class="divider-text">-->
+<!--        <span class="bg-light">Lets Go</span>-->
+<!--      </p>-->
+<!--      <form>-->
+<!--        <div class="form-group input-group">-->
+<!--          <div class="input-group-prepend">-->
+<!--            <span class="input-group-text"> <i class="fa fa-user"></i> </span>-->
+<!--          </div>-->
+<!--          <input name="name" id="name" class="form-control" placeholder="Full name" type="text" [(ngModel)]="user.name" required>-->
+<!--          <div class="valid-feedback">Valid.</div>-->
+<!--          <div class="invalid-feedback">Please fill out this field.</div>-->
+<!--        </div> &lt;!&ndash; form-group// &ndash;&gt;-->
+<!--        <div class="form-group input-group">-->
+<!--          <div class="input-group-prepend">-->
+<!--            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>-->
+<!--          </div>-->
+<!--          <input id="uname" [(ngModel)]="user.email" class="form-control" placeholder="Email address" type="email" required>-->
+<!--          <div class="valid-feedback">Valid.</div>-->
+<!--          <div class="invalid-feedback">Please fill out this field.</div>-->
+<!--        </div> &lt;!&ndash; form-group// &ndash;&gt;-->
+<!--        <div class="form-group input-group">-->
+<!--          <div class="input-group-prepend">-->
+<!--            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>-->
+<!--          </div>-->
+
+<!--          <input  class="form-control" placeholder="Phone number"  id="number" type="text" [(ngModel)]="user.mobileNo"  required>-->
+<!--          <div class="valid-feedback">Valid.</div>-->
+<!--          <div class="invalid-feedback">Please fill out this field.</div>-->
+<!--        </div> &lt;!&ndash; form-group// &ndash;&gt;-->
+<!--        <div class="form-group input-group">-->
+<!--          <div class="input-group-prepend">-->
+<!--            <span class="input-group-text"> <i class="fa fa-heart"></i> </span>-->
+<!--          </div>-->
+
+<!--          <input id="address" class="form-control" placeholder="Enter Your Address" [(ngModel)]="user.address"  type="text">-->
+<!--        </div>-->
+<!--&lt;!&ndash;        <div class="form-group input-group">&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="input-group-prepend">&ndash;&gt;-->
+<!--&lt;!&ndash;            <span class="input-group-text"> <i class="fa fa-building"></i> </span>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;          <input name="" class="form-control" placeholder="Enter Your city" type="text">&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div>&ndash;&gt;-->
+<!--&lt;!&ndash;          <label class="text-muted">Enter your complete address</label>&ndash;&gt;-->
+<!--&lt;!&ndash;          <textarea style="width:100%;"></textarea>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--        <div class="form-group input-group">-->
+<!--          <div class="input-group-prepend">-->
+<!--            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>-->
+<!--          </div>-->
+<!--          <input class="form-control" placeholder="Create password" name="pswd" type="password" [(ngModel)]="user.password">-->
+<!--        </div>-->
+<!--        &lt;!&ndash; form-group// &ndash;&gt;-->
+<!--        <div class="form-group">-->
+<!--          <select [(ngModel)]="user.gender" class="form-control custom-select" name="gender" required>-->
+<!--            <option >Male</option>-->
+<!--            <option >Female</option>-->
+<!--            <option >Transgender</option>-->
+<!--          </select>-->
+<!--          <div class="valid-feedback">Valid.</div>-->
+<!--          <div class="invalid-feedback">Please fill out this field.</div>-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--          <button type="submit" class="btn btn-success btn-block" (click)="createUser()"> Create Account  </button>-->
+<!--        </div> &lt;!&ndash; form-group// &ndash;&gt;-->
+<!--        <p class="text-center">Have an account? <a href="login">Log In</a> </p>-->
+<!--      </form>-->
+<!--    </article>-->
+<!--  </div> &lt;!&ndash; card.// &ndash;&gt;-->
+
+<!--</div>-->
+<!--&lt;!&ndash;container end.//&ndash;&gt;-->
+
+<!--</div>-->
+<div class="bg-white">
+
+  <h2 class="font1 p-5 text-center">Create Your account</h2>
+  <p class="divider-text">
+            <span class="bg-light">Lets Go</span>
+        </p>
+
+  <!--Form-->
+  <div class="container  " style="padding-left: 400px;padding-right: 400px;">
+
+
+    <form action="login" class="was-validated">
+
+      <div class="form-group">
+        <input type="text" class="form-control" id="name" placeholder="Your Name" name="name" [(ngModel)]="user.name" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" id="uname" placeholder="Your Email Address" name="email" [(ngModel)]="user.email" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="pwd" placeholder="Choose Password" name="pswd" [(ngModel)]="user.password" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="number" placeholder="Mobile Number(for order status update)" name="mob" [(ngModel)]="user.mobileNo" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="address" placeholder="Enter Your Address" name="pswd" [(ngModel)]="user.address" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <b class="ml-1 font-weight-lighter">Gender: </b>&nbsp;
+      <div class="form-group">
+        <select [(ngModel)]="user.gender" class="form-control custom-select" name="gender" required>
+          <option >Male</option>
+          <option >Female</option>
+          <option >Transgender</option>
+        </select>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <button type="submit" class="btn btn-outline-success mt-3 mb-3 w-100" (click)="createUser()">REGISTER</button>
+    </form>
+    <div class="pb-5 mr-1">
+      <small>Already have an Account?<a href="login">Login here</a></small>
+    </div>
+
+  </div>
+
+</div>

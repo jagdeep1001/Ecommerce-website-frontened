@@ -1,1 +1,14 @@
-<p>product-details works!</p>
+<div class="mt-4 d-flex container" style="text-align: center;">
+
+  <div class="m-4 p-2" style="border: 1px solid lightgrey;">
+    <img src="{{product.image}}" height="400">
+  </div>
+  <div class="mt-4 ">
+    <h2 class="text-success font-weight-bold font-italic" >{{product.name}}</h2>
+    <span  class="text-muted font-italic">{{product.details}}</span><br><br>
+    <span class="text-success font-weight-bold font-italic">Price : </span>
+    <span class="text-danger font-italic">{{product.price | currency:"INR"}}</span><br><br>
+    <button class="btn btn-outline-success" (click)="addThisProductToCart(product.productId)">Add to Cart</button>
+  </div>
+
+</div>

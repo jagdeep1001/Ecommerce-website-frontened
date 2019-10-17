@@ -1,0 +1,97 @@
+
+<div class="container-fluid mt-4" id="grad" style="padding-bottom: 100px;">
+
+
+  <div class="bg-white signupbox">
+
+    <h2 class="font1 p-5 text-center">Add New Product</h2>
+
+    <!--Form-->
+    <div class="container">
+
+
+      <form action="add-product" class="was-validated">
+
+        <div class="form-group">
+          <input type="text" class="form-control" id="name" placeholder="Enter Product Name" name="name" [(ngModel)]="product.name" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <!--<div class="form-group">
+          //<input type="text" class="form-control" id="category" placeholder="Enter Product Category" name="category" [(ngModel)]="product.category" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>-->
+
+        <div class="text">
+          <input type="" class="form-control" id="image" placeholder="Enter Image Path" name="image" [(ngModel)]="product.image" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="price" placeholder="Enter Price" name="price" [(ngModel)]="product.price" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="details" placeholder="Enter Details" name="details" [(ngModel)]="product.details" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <!--<div class="form-group dropdown">
+          <button type="button" class="form-control btn btn-info dropdown-toggle" id="category" name="category" data-toggle="dropdown" [(ngModel)]="product.category" required>
+            Dropdown button
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item">clothing</a>
+            <a class="dropdown-item">footwear</a>
+            <a class="dropdown-item">electronics</a>
+            <a class="dropdown-item">books</a>
+          </div>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>-->
+        <!--<div class="ml-1">Select Category:- </div>&nbsp;
+        <div class="form-check-inline pr-5">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="category" value="clothing" [(ngModel)]="product.category" checked>Clothing
+          </label>
+        </div>
+        <div class="form-check-inline pl-5">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="category" value="footwear" [(ngModel)]="product.category">Footwear
+          </label>
+        </div>
+        <br>
+        <div class="form-check-inline pl-2 pr-4">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="category" value="electronics" [(ngModel)]="product.category">Electronics
+          </label>
+        </div>
+        <div class="form-check-inline pl-5">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="category" value="Books" [(ngModel)]="product.category">Books
+          </label>
+        </div>-->
+        <div class="form-group">
+          <select [(ngModel)]="product.category" class="form-control custom-select" name="category" required>
+            <option >clothing</option>
+            <option >footwear</option>
+            <option >electronics</option>
+            <option >books</option>
+          </select>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <button type="submit" class="btn btn-info mt-3 mb-3 w-100" (click)="addProduct()">Add Product</button>
+
+
+      </form>
+    </div>
+
+  </div>
+
+
+
+</div>
+

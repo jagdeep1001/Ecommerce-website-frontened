@@ -1,0 +1,46 @@
+<div class="bg-light">
+<div class="mt-4 bg-light">
+
+<div class="container pt-3">
+  <div class="row justify-content-sm-center">
+    <div class="col-sm-6 col-md-4">
+
+      <div class="card border-info text-center ">
+        <div class="card-header">
+          Sign in to continue
+        </div>
+        <div class="card-body">
+          <img src="https://placeimg.com/128/128/tech/sepia"><br>
+
+          <h4 class="text-center font2">Shopping Bee</h4>
+          <form class="form-signin">
+            <div class="form-group">
+            <input type="text"  class="form-control mb-2" name="username" [(ngModel)]="username" placeholder="Username"  required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group">
+            <input type="password" class="form-control mb-2" placeholder="Password" name="Password" [(ngModel)]="password"  required>
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <button class="btn btn-lg btn-success btn-block mb-1" type="submit" (click)="checkLogin()" >Log in</button>
+            <label class="checkbox float-left">
+              <input type="checkbox" value="remember-me">
+              Remember me
+            </label>
+            <a href="#" class="float-right">Need help?</a>
+          </form>
+        </div>
+      </div>
+      <div class="m-2" style="padding-left:25px;">
+      Do not have an account ? <a href="registration">Register Now! </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+</div>
+
+</div>
