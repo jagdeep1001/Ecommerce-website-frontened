@@ -73,6 +73,7 @@
             <input type="radio" class="form-check-input" name="category" value="Books" [(ngModel)]="product.category">Books
           </label>
         </div>-->
+        <label class="font1 text-muted">Choose Category:</label>
         <div class="form-group">
           <select [(ngModel)]="product.category" class="form-control custom-select" name="category" required>
             <option >clothing</option>
@@ -83,7 +84,7 @@
           <div class="valid-feedback">Valid.</div>
           <div class="invalid-feedback">Please fill out this field.</div>
         </div>
-        <button type="submit" class="btn btn-info mt-3 mb-3 w-100" (click)="addProduct()">Add Product</button>
+        <button type="submit" class="btn btn-outline-success mt-3 mb-3 w-100" (click)="addProduct()">Add Product</button>
 
 
       </form>

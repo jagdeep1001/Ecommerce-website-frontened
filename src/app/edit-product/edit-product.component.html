@@ -1,1 +1,88 @@
-<p>edit-product works!</p>
+
+<div class="container bg-light pt-3">
+
+  <div class="row">
+
+    <div class="col-sm-7">
+
+      <img src="{{product.image}}" class="img-thumbnail m-5 p-5" style="height:500px; width: 500px;">
+
+    </div>
+
+    <div class="col-sm-5">
+
+      <h2 class="pt-2 font1">Edit Product Details</h2><hr>
+
+      <form>
+
+        <div class="form-group">
+          <div>
+            <label>Edit Name :</label>
+          </div>
+          <input type="text" class="form-control" id="name" placeholder="{{product.name}}" name="name" value="{{product.name}}" [(ngModel)]="product.name">
+        </div>
+        <div class="form-group">
+          <div>
+            <label>Edit Price :</label>
+          </div>
+          <input type="email" class="form-control" id="price" placeholder="{{product.price}}" value="{{product.price}}" name="price" [(ngModel)]="product.price">
+        </div>
+        <div class="form-group">
+          <div>
+            <label>Edit Product Details :</label>
+          </div>
+          <input type="text" class="form-control" id="details" placeholder="{{product.details}}" name="mob" value="{{product.details}}" [(ngModel)]="product.details">
+        </div>
+        <!--<div class="form-group">
+          <div>
+            <label>Edit Product Category :</label>
+          </div>
+          <input type="text" class="form-control" placeholder="{{product.category}}" name="category" value="{{product.category}}" disabled>
+        </div>-->
+        <!--<div class="ml-1">Edit Category:- </div>&nbsp;
+        <div class="form-check-inline pr-5">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="category" value="clothing" [(ngModel)]="product.category" checked>Clothing
+          </label>
+        </div>
+        <div class="form-check-inline pl-5">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="category" value="footwear" [(ngModel)]="product.category">Footwear
+          </label>
+        </div>
+        <br>
+        <div class="form-check-inline pl-2 pr-4">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="category" value="electronics" [(ngModel)]="product.category">Electronics
+          </label>
+        </div>
+        <div class="form-check-inline pl-5">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="category" value="Books" [(ngModel)]="product.category">Books
+          </label>
+        </div>-->
+        <div>
+          <label>Edit Product's Category :</label>
+        </div>
+        <div class="form-group">
+          <select [(ngModel)]="product.category" class="form-control custom-select" name="category">
+            <option>clothing</option>
+            <option>footwear</option>
+            <option>electronics</option>
+            <option>books</option>
+          </select>
+        </div>
+
+
+        <button type="submit" class="btn btn-outline-success mt-5 mb-5 w-100" (click)="editProduct()">Edit Details</button>
+      </form>
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+

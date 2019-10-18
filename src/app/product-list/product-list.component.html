@@ -5,6 +5,7 @@
   <div >
     <p class="text-muted font-italic bgcolor" style="text-align: center;">Categories</p>
     <form class="pl-4">
+      <input type="radio" id="all" class="form-check-input" name="category"(click)="goTo('all')" ><span class="text-muted font-italic">All</span><br>
       <input type="radio" id="clothing" class="form-check-input" name="category"(click)="goTo('clothing')" ><span class="text-muted font-italic">Clothing</span><br>
       <input type="radio" id="footwear" class="form-check-input" name="category"(click)="goTo('footwear')" ><span class="text-muted font-italic">FootWear</span><br>
       <input type="radio" id="electronics" class="form-check-input" name="category"(click)="goTo('electronics')" ><span class="text-muted font-italic">Electronics</span><br>
@@ -31,7 +32,7 @@
       <input type="radio" class="form-check-input" name="range" (click)="filterByPrice(0,1000)"><span class="text-muted font-italic">Less than 1000</span><br>
       <input type="radio" class="form-check-input" name="range" (click)="filterByPrice(1000,3000)"><span class="text-muted font-italic">1000-3000</span><br>
       <input type="radio" class="form-check-input" name="range" (click)="filterByPrice(3000,5000)"><span class="text-muted font-italic">3000-5000</span><br>
-      <input type="radio" class="form-check-input" name="range" (click)="filterByPrice(5000,10000)"><span class="text-muted font-italic">Greater than 5000</span><br>
+      <input type="radio" class="form-check-input" name="range" (click)="filterByPrice(5000,90000)"><span class="text-muted font-italic">Greater than 5000</span><br>
 
 
     </form>
@@ -56,7 +57,7 @@
 <div class="mt-2 d-flex" style="flex-wrap: wrap;">
 <div *ngFor="let prod of products">
 
-  <div class="card m-3 p-2" style="width: 16rem; height: 500px;">
+  <div class="card m-3 p-2" style="width: 16rem; height:500px;">
     <a href="productdetails"><img src="{{prod.image}}" class="card-img-top" height="250"></a>
     <div class="card-body">
       <h5 class="card-title font-italic">{{prod.name}}</h5>
