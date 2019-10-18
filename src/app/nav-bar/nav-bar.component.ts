@@ -14,7 +14,7 @@ export class NavBarComponent implements OnInit {
   private user;
   private result;
   private searchedItem: string;
-  @Output() private childEvent = new EventEmitter();
+  @Output()  childEvent = new EventEmitter();
   constructor(private registrationService: RegistrationService, private loginService: AuthenticationService,
               private productService: ProductsService) { }
 
