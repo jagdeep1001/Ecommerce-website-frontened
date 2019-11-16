@@ -30,11 +30,7 @@ export class NavBarComponent implements OnInit {
     // tslint:disable-next-line:triple-equals
     if (this.searchedItem != undefined && this.searchedItem != '') {
       this.productService.getSearchedResult(this.searchedItem).subscribe(data => {
-        /*const object = {
-          result: undefined,
-          search: undefined
-        };
-        object.search = this.searchedItem;*/
+
         this.result = data;
         // this.products = data;
         this.childEvent.emit(this.result);

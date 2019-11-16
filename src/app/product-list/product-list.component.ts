@@ -139,7 +139,11 @@ export class ProductListComponent implements OnInit {
     this.productService.removeFromDB(product.productId).subscribe((data) => {
       this.products = data;
       alert('Product Deleted Successfully');
+
     });
+    this.cartService.removeOne(product.productId).subscribe(data=>{
+      this.products=data;
+    })
   }
 
   editProduct(product) {

@@ -25,18 +25,6 @@ export class LoginDComponent implements OnInit {
       }
     );
   }
-  /*checkLogin() {
-    (this.loginservice.authenticate(this.username, this.password).subscribe(
-        data => {
-          this.router.navigate(['home']);
-          this.invalidLogin = false;
-        },
-        error => {
-          this.invalidLogin = true;
-        }
-      )
-    );
-  }*/
 
 }
 

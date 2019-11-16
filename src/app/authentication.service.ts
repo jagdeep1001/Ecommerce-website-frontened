@@ -20,14 +20,7 @@ export class AuthenticationService {
   currentUser: Users;
   public admin: boolean;
 
-  /*authenticate(username, password) {
-    if (username === 'hiteshmunjal22@gmail.com' && password === 'password') {
-      sessionStorage.setItem('username', username);
-      return true;
-    } else {
-      return false;
-    }
-  }*/
+
 
   authenticate(username, password) {
     const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
@@ -52,11 +45,5 @@ export class AuthenticationService {
   logOut() {
     sessionStorage.removeItem('username');
   }
-  /*isUserAdmin() {
-    this.registrationService.getUser().subscribe( data => this.currentUser = data);
-    if (this.currentUser.role === 'Admin') {
-      return true;
-    }
-    return false;
-  }*/
+
 }
